@@ -22,3 +22,4 @@ Route::get('/',[UsuariosController::class,'index']);
 Route::post('/guardar',[UsuariosController::class,'guardar']);
 Route::get('/editar/{id}',[UsuariosController::class,'editar']);
 Route::put('/actualizar/{id}',[UsuariosController::class,'actualizar']);
+Route::delete('/eliminar/{id}',[UsuariosController::class,'eliminar']);
