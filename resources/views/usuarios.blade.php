@@ -75,33 +75,49 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
         body{
-            background-color: white;
+            background-color: cadetblue;
+            color:white;
             display: flex;
             flex-direction:column;
             flex:1;
             min-height:100vh;
         }
+        header, main, footer{
+            flex:1;
+            width: 100vw;
+        }
         .ingresar{
             margin: 2%;
             text-align:center;
             form{
+                width: 100vw;
+                align-items: center;
+                justify-content: center;
                 text-align:center;
+                input{
+                    width: 50vw;
+                    padding: 1vh;
+                }
                 .btn-ingresar{
-                    color: white;
+                    color: white;  
                     background-color: gray;
-                    padding: 1vw;
+                    width: 20%;
+                    padding: 1vh;
+                    font-size: large;
                 }
             }
         }
         .container{
             width: 100%;
             justify-content: end;
-            margin: 1%;
+            margin:10px;
             padding: 0;
             .table{
                 width: 90vw;
+                margin:0;
             }
         }
         .derechos{
@@ -110,6 +126,17 @@
             padding: 1px;
             text-align:center;
             font-size:small;
+        }
+        @media (max-width:600px){
+            .ingresar{
+                margin:1%;
+                width: 100vw;
+                form{
+                    input{
+                        width: 100vw;
+                    }
+                }
+            }   
         }
     </style>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

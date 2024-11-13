@@ -12,6 +12,7 @@
     <main>
     <section class="editar">
             <h3>Editar usuario:</h3>
+            <br><br>
             <form action="/actualizar/{{$editUsuario->id}}" method="post">
                 @csrf
                 @method('put')
@@ -41,23 +42,36 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
         body{
-            background-color: white;
+            margin:0;
+            color:white;
+            background-color: cadetblue;
             display: flex;
             flex-direction:column;
-            flex:1;
             min-height:100vh;
+        }
+        header, main, footer{
+            flex:1;
         }
         .editar{
             margin: 2%;
             text-align:center;
             form{
+                align-items: center;
+                justify-content: center;
                 text-align:center;
+                input{
+                    width: 50vw;
+                    padding: 1vh;
+                }
                 .btn-ingresar{
-                    color: white;
+                    color: white;  
                     background-color: gray;
-                    padding: 1vw;
+                    width: 20%;
+                    padding: 1vh;
+                    font-size: large;
                 }
             }
         }
@@ -68,6 +82,16 @@
             text-align:center;
             font-size:small;
         }
-    </style>
+        @media (max-width:600px){
+            .editar{
+                margin:1%;
+                width: 100vw;
+                form{
+                    input{
+                        width: 100vw;
+                    }
+                }
+            }   
+        }
 </body>
 </html>
