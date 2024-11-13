@@ -16,4 +16,19 @@ class UsuariosController extends Controller
         Usuarios::create($request->all());
         return redirect()->to('/');
     }
+    public function editar($id){
+        $editUsuario = Usuarios::where('id',$id)->firstOrFail();
+        return view('editarUsuario',compact('editUsuario'));
+    }
+    public function actualizar(Request $request, $id){
+        $actUsuario = Usuarios::findOrFail($id);
+        $requestUsuario = $request->all();
+        $actUsuario->update($requestUsuario);
+        return redirect()->to('/');
+    }
+    public function eliminar($id){
+        $eliminarUsuario = Usuarios::findOrFail($id);
+        $eliminarUsuario->delete();
+        return redirect()->to('/');
+    }
 }

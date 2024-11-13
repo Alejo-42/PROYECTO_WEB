@@ -51,8 +51,13 @@
                         <td>{{$getUsuarios->celular}}</td>
                         <td>{{$getUsuarios->cedula}}</td>
                         <td>
-                            <a href=""><button type="submit" class="btn btn-primary">Editar</button></a>
-                            <a href=""><button type="submit" class="btn btn-danger">Eliminar</button></a>
+                            <a href="/editar/{{$getUsuarios->id}}"><button type="submit" class="btn btn-primary">Editar</button></a>
+                            
+                            <form action="/eliminar/{{$getUsuarios->id}}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

@@ -20,3 +20,5 @@ use App\Http\Controllers\UsuariosController;
 
 Route::get('/',[UsuariosController::class,'index']);
 Route::post('/guardar',[UsuariosController::class,'guardar']);
+Route::get('/editar/{id}',[UsuariosController::class,'editar']);
+Route::put('/actualizar/{id}',[UsuariosController::class,'actualizar']);
