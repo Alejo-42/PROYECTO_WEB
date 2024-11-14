@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
+    <link rel="stylesheet" href="{{asset('crud/css/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
+<body class="body">
+    <header class="header">
     </header>
-    <main>
+    <main class="main">
         <section class="ingresar">
             <h3>Ingresar usuario:</h3>
             <form action="/guardar" method="post">
@@ -30,7 +31,6 @@
                 <button class="btn-ingresar" type="submit">Guardar Usuario</button>
             </form>
         </section>
-        <section class="container">
             <table class="table table-dark">
                 <thead>
                     <tr>
@@ -63,82 +63,10 @@
                     @endforeach
                 </tbody>
             </table>
-        </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p class="derechos">Derechos de autor reservados &copy 2024</p>
     </footer>
-    <style>
-        *,
-        *::after,
-        *::before{
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        body{
-            background-color: cadetblue;
-            color:white;
-            display: flex;
-            flex-direction:column;
-            flex:1;
-            min-height:100vh;
-        }
-        header, main, footer{
-            flex:1;
-            width: 100vw;
-        }
-        .ingresar{
-            margin: 2%;
-            text-align:center;
-            form{
-                width: 100vw;
-                align-items: center;
-                justify-content: center;
-                text-align:center;
-                input{
-                    width: 50vw;
-                    padding: 1vh;
-                }
-                .btn-ingresar{
-                    color: white;  
-                    background-color: gray;
-                    width: 20%;
-                    padding: 1vh;
-                    font-size: large;
-                }
-            }
-        }
-        .container{
-            width: 100%;
-            justify-content: end;
-            margin:10px;
-            padding: 0;
-            .table{
-                width: 90vw;
-                margin:0;
-            }
-        }
-        .derechos{
-            color:white;
-            background-color:black;
-            padding: 1px;
-            text-align:center;
-            font-size:small;
-        }
-        @media (max-width:600px){
-            .ingresar{
-                margin:1%;
-                width: 100vw;
-                form{
-                    input{
-                        width: 100vw;
-                    }
-                }
-            }   
-        }
-    </style>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
